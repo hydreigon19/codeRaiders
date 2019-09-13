@@ -6,7 +6,9 @@ public class BasicMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
+    public float rotationSpeed;
     private Rigidbody2D rb;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,6 +28,17 @@ public class BasicMovement : MonoBehaviour
       
         // transform.position = transform.position + vertical * Time.deltaTime;
     }
+
+    //rotate player
+    void RotatePlayer()
+    {
+        Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x)* Mathf.Rad2Deg - 90;
+
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = rotation;
+    }
+
     void FixedUpdate()//move our character
     {
 
