@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicMovement : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
@@ -16,18 +16,20 @@ public class BasicMovement : MonoBehaviour
     public Animator animator;
     void Update()
     {
-
+        
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed, 0.0f);
         rb.AddForce(movement * speed);
-        if (movement != Vector3.zero)
+        if(movement!=Vector3.zero)
         {
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
 
         }
+      
         animator.SetFloat("Magnitude", movement.magnitude);
         transform.position = transform.position + movement * Time.deltaTime;
-
+        //Vector3 moveDirection = gameObject.transform.position - _origPos;
+      
         // transform.position = transform.position + vertical * Time.deltaTime;
     }
     void FixedUpdate()//move our character

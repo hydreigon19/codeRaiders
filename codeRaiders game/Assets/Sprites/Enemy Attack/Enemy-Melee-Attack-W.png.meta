@@ -1,0 +1,679 @@
+fileFormatVersion: 2
+guid: b9e834104ed8f8c428fb02d628ddfbe2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2011340669955886617
+    second: Enemy-Melee-Attack-W_0
+  - first:
+      213: 4219773518605571153
+    second: Enemy-Melee-Attack-W_1
+  - first:
+      213: -2802696491460139160
+    second: Enemy-Melee-Attack-W_2
+  - first:
+      213: -7479957475624721731
+    second: Enemy-Melee-Attack-W_3
+  - first:
+      213: -2216804617812783023
+    second: Enemy-Melee-Attack-W_4
+  - first:
+      213: 7534570771340971219
+    second: Enemy-Melee-Attack-W_5
+  - first:
+      213: -2455043527849799695
+    second: Enemy-Melee-Attack-W_6
+  - first:
+      213: -2064159003210641599
+    second: Enemy-Melee-Attack-W_7
+  - first:
+      213: -1927316180606879105
+    second: Enemy-Melee-Attack-W_8
+  - first:
+      213: -689373094404021103
+    second: Enemy-Melee-Attack-W_9
+  - first:
+      213: 4629646314055158592
+    second: Enemy-Melee-Attack-W_10
+  - first:
+      213: -6875873690404048636
+    second: Enemy-Melee-Attack-W_11
+  - first:
+      213: 1622791608143766112
+    second: Enemy-Melee-Attack-W_12
+  - first:
+      213: 6252665169199452993
+    second: Enemy-Melee-Attack-W_13
+  - first:
+      213: 5053137842060857499
+    second: Enemy-Melee-Attack-W_14
+  - first:
+      213: -1144462081911306639
+    second: Enemy-Melee-Attack-W_15
+  - first:
+      213: 1219851318674119399
+    second: Enemy-Melee-Attack-W_16
+  - first:
+      213: 1342861198654453925
+    second: Enemy-Melee-Attack-W_17
+  - first:
+      213: 1542445575338666095
+    second: Enemy-Melee-Attack-W_18
+  - first:
+      213: 1277334333406414229
+    second: Enemy-Melee-Attack-W_19
+  - first:
+      213: -5644856010974032977
+    second: Enemy-Melee-Attack-W_20
+  - first:
+      213: 6921497703659118482
+    second: Enemy-Melee-Attack-W_21
+  - first:
+      213: -8359048685883568403
+    second: Enemy-Melee-Attack-W_22
+  - first:
+      213: 7978174628610367302
+    second: Enemy-Melee-Attack-W_23
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_0
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 51
+        width: 51
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda3fe467e24c7f459f27d320658ae2f
+      internalID: -2011340669955886617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_1
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 42
+        width: 51
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bed34284b395a7468f0b82707dc62af
+      internalID: 4219773518605571153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_2
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 48
+        width: 51
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b7e4738c72dcd4398514eea300af2d
+      internalID: -2802696491460139160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_3
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 39
+        width: 54
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6f6f8f602ed71418d98bad05f71705
+      internalID: -7479957475624721731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_4
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 45
+        width: 66
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb15c57134b108942a7a24e35a31daec
+      internalID: -2216804617812783023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_5
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 42
+        width: 72
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5260cc2ce4cae4ba40b992a3f157f0
+      internalID: 7534570771340971219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_6
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 45
+        width: 81
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2fbb422e33b3e40b11342dda3bf32e
+      internalID: -2455043527849799695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_7
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 42
+        width: 90
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04ab01c9756bb74796937ecdbb2ade6
+      internalID: -2064159003210641599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_8
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 42
+        width: 102
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9f4cb34c5b84346baccbf21eededc7
+      internalID: -1927316180606879105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_9
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 39
+        width: 105
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b03d7438e7ced4fa626f0918803a03
+      internalID: -689373094404021103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_10
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 42
+        width: 108
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f8d0fe041b5844c9a9c297c30c65ad
+      internalID: 4629646314055158592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_11
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 42
+        width: 108
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18220940a49965c4c821e0cadb657330
+      internalID: -6875873690404048636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_12
+      rect:
+        serializedVersion: 2
+        x: 3153
+        y: 39
+        width: 93
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9bc13842b6e8f4991e87143e39040c
+      internalID: 1622791608143766112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_13
+      rect:
+        serializedVersion: 2
+        x: 3417
+        y: 39
+        width: 105
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bfdc3c3abf0bd94c90a4afa95fceccf
+      internalID: 6252665169199452993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_14
+      rect:
+        serializedVersion: 2
+        x: 3582
+        y: 51
+        width: 177
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71c1636f244a0e4da3fbc4400c2fa74
+      internalID: 5053137842060857499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_15
+      rect:
+        serializedVersion: 2
+        x: 3918
+        y: 39
+        width: 117
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e10210c27357cf4a999bd0d7aa111bb
+      internalID: -1144462081911306639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_16
+      rect:
+        serializedVersion: 2
+        x: 4176
+        y: 42
+        width: 114
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd4bc3b1a8a3ed42a4591c3fe846f7e
+      internalID: 1219851318674119399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_17
+      rect:
+        serializedVersion: 2
+        x: 4434
+        y: 45
+        width: 111
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f108eb457c7844d9925ddb1176bf52
+      internalID: 1342861198654453925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_18
+      rect:
+        serializedVersion: 2
+        x: 4695
+        y: 39
+        width: 105
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5128aac0b719b604285769b3b41124d1
+      internalID: 1542445575338666095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_19
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 48
+        width: 99
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def59111fc559c84fbe99b258c31fd29
+      internalID: 1277334333406414229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_20
+      rect:
+        serializedVersion: 2
+        x: 5217
+        y: 48
+        width: 93
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7976a754b2388419d0a6f39b60e6b2
+      internalID: -5644856010974032977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_21
+      rect:
+        serializedVersion: 2
+        x: 5475
+        y: 42
+        width: 78
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdf0a0d70c08804d8efc7d3d2e78e3c
+      internalID: 6921497703659118482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_22
+      rect:
+        serializedVersion: 2
+        x: 5730
+        y: 45
+        width: 63
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5828f646b85eb94d83e4f4ef0001b3b
+      internalID: -8359048685883568403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Attack-W_23
+      rect:
+        serializedVersion: 2
+        x: 5991
+        y: 48
+        width: 57
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c032d62bb46e74db30f0942d599288
+      internalID: 7978174628610367302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 16c5a45b81d61ad42ba363e645985d29
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4437847294430839250
+    second: Enemy-Melee-Idle-E_0
+  - first:
+      213: -3044364243346071210
+    second: Enemy-Melee-Idle-E_1
+  - first:
+      213: -7376184889482227052
+    second: Enemy-Melee-Idle-E_2
+  - first:
+      213: -5187052881332639067
+    second: Enemy-Melee-Idle-E_3
+  - first:
+      213: -2358711465007829894
+    second: Enemy-Melee-Idle-E_4
+  - first:
+      213: -8891254719569474800
+    second: Enemy-Melee-Idle-E_5
+  - first:
+      213: 2535827229388798195
+    second: Enemy-Melee-Idle-E_6
+  - first:
+      213: -3744002210568917598
+    second: Enemy-Melee-Idle-E_7
+  - first:
+      213: -144757688354544728
+    second: Enemy-Melee-Idle-E_8
+  - first:
+      213: -6311716488418554044
+    second: Enemy-Melee-Idle-E_9
+  - first:
+      213: -7026003929952265609
+    second: Enemy-Melee-Idle-E_10
+  - first:
+      213: 756042919776252004
+    second: Enemy-Melee-Idle-E_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-E_0
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 24
+        width: 48
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f931bcd75aeb6a4f943b11e588604d0
+      internalID: -4437847294430839250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-E_1
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 24
+        width: 50
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e77c3fa644f5694faa512db3daa0f7b
+      internalID: -3044364243346071210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-E_2
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 24
+        width: 49
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c22f8d327d25849b06b24e9f5b3612
+      internalID: -7376184889482227052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-E_3
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 24
+        width: 49
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550e949502683ed4693e216a6ec04ae2
+      internalID: -5187052881332639067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-E_4
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 24
+        width: 52
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e5eef75c8caab847a809d5bfbf3116c
+      internalID: -2358711465007829894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-E_5
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 24
+        width: 51
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446e640d9b54981408eb25af7a1f72fa
+      internalID: -8891254719569474800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-E_6
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 24
+        width: 51
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e892dba69106c4385e57c45cdfcba2
+      internalID: 2535827229388798195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-E_7
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 24
+        width: 52
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b224a7f925bdc94fb9e2c5ac663ebdc
+      internalID: -3744002210568917598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-E_8
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 24
+        width: 51
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494548b696a3cd84b8bd6177e527c03b
+      internalID: -144757688354544728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-E_9
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 24
+        width: 53
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038830acec1ae1141b9aaee879e2e276
+      internalID: -6311716488418554044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-E_10
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 24
+        width: 50
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf17c0846f8db384b88df41ad940822b
+      internalID: -7026003929952265609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-E_11
+      rect:
+        serializedVersion: 2
+        x: 2919
+        y: 24
+        width: 49
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf845bb6c909f847b7b41979d867393
+      internalID: 756042919776252004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
