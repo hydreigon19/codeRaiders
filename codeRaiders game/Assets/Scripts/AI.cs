@@ -48,4 +48,13 @@ public class AI : MonoBehaviour
         rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Fire");  
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<Health>().DealDamage(6);
+        }
+    }
+
 }
