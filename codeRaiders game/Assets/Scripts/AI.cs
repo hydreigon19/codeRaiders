@@ -8,10 +8,13 @@ public class AI : MonoBehaviour
     public float speed;
     public Transform player;
     private Vector2 movement;
+    private Vector3 direction;
     private Rigidbody2D rb;
+   
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+      
     }
 
     // Update is called once per frame
@@ -20,41 +23,51 @@ public class AI : MonoBehaviour
     {
 
         //Vector3 movement = new Vector3(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed, 0.0f);
-        Vector3 movement = player.position - transform.position;
-        rb.AddForce(movement * speed);
-        if (movement != Vector3.zero)
+        direction = player.position - transform.position;
+    
+        rb.AddForce(direction * speed);
+        if (direction != Vector3.zero)
         {
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
+            animator.SetFloat("Horizontal", direction.x);
+            animator.SetFloat("Vertical", direction.y);
 
         }
 
-        animator.SetFloat("Magnitude", movement.magnitude);
-        transform.position = transform.position + movement * Time.deltaTime;
+        animator.SetFloat("Magnitude", direction.magnitude);
+        transform.position = transform.position + direction * Time.deltaTime;
+     
         /* Vector3 direction = player.position - transform.position;
          float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
          rb.rotation = angle;
          direction.Normalize();
          movement = direction;*/
 
+       
 
     }
     void FixedUpdate()//move our character
     {
-        moveCharacter(movement);
+        moveCharacter(direction);
     }
-    void moveCharacter(Vector2 direction)
+    void moveCharacter(Vector3 direction)
     {
-        rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
+        rb.MovePosition((Vector3)transform.position + (this.direction * speed * Time.deltaTime));
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Fire");  
+        Debug.Log("Fire");
+      
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Health>().DealDamage(6);
+          
+                other.gameObject.GetComponent<Health>().DealDamage(6);
+            
         }
+    }
+    void OnTriggerExit2D(Collider2D collider)
+    {
+      
     }
 
 }

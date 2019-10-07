@@ -573,6 +573,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!4 &1400850947 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 854250953301662029, guid: 4d8eb4382e355b249a19c1e417f3c0a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 854250952552272718}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1423424898
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,6 +666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1482381342}
   - component: {fileID: 1482381344}
+  - component: {fileID: 1482381349}
   - component: {fileID: 1482381343}
   - component: {fileID: 1482381345}
   - component: {fileID: 1482381346}
@@ -680,7 +687,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482381341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 226, y: 171, z: 0}
+  m_LocalPosition: {x: 230.1, y: 214.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 273233790}
@@ -699,15 +706,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478f2917bcde5ea46b0be2a693848e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  playerid: 0
+  useController: 0
+  MOVEMENT_BASE_SPEED: 1
+  CROSSHAIR_DISTANCE: 1
+  BULLET_BASE_SPEED: 20
+  AIMING_BASE_PENALTY: 1
+  movementDirection: {x: 0, y: 0}
+  mouseMovement: {x: 0, y: 0}
+  movementSpeed: 7
+  endOfAiming: 0
+  IsAiming: 0
+  shootingRecoil: 0
+  rb: {fileID: 0}
+  animator: {fileID: 1482381345}
   crosshair: {fileID: 273233789}
   bulletPrefab: {fileID: 3631395555101159871, guid: 29b8fec75a6ce30449759b013b2783c6,
     type: 3}
-  endOfAiming: 0
-  Crosshair_Distance: 2.5
-  BULLET_BASE_SPEED: 20
-  rb: {fileID: 0}
-  animator: {fileID: 1482381345}
+  cam: {fileID: 0}
+  mousePos: {x: 0, y: 0}
 --- !u!212 &1482381344
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -810,6 +827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthBar: {fileID: 998440140}
+  update: 0
 --- !u!61 &1482381348
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -836,6 +854,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2153931, y: 1.937088}
   m_EdgeRadius: 0
+--- !u!114 &1482381349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482381341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f852f84660cea244abdf2f7e64bd9057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentInterObj: {fileID: 1694972666}
 --- !u!1 &1683384556
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +940,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683384556}
   m_CullTransparentMesh: 0
+--- !u!1 &1694972666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1694972667}
+  m_Layer: 0
+  m_Name: HealthItem
+  m_TagString: interObject
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1694972667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694972666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 240.58928, y: 172.76057, z: -652.1399}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1400850947}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1850829869
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,3 +1335,72 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.17, y: 1.4628514}
   m_EdgeRadius: 0
+--- !u!1001 &854250952552272718
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1694972667}
+    m_Modifications:
+    - target: {fileID: 854250953301662028, guid: 4d8eb4382e355b249a19c1e417f3c0a5,
+        type: 3}
+      propertyPath: m_Name
+      value: BigHealthPotionMoving1
+      objectReference: {fileID: 0}
+    - target: {fileID: 854250953301662029, guid: 4d8eb4382e355b249a19c1e417f3c0a5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.991
+      objectReference: {fileID: 0}
+    - target: {fileID: 854250953301662029, guid: 4d8eb4382e355b249a19c1e417f3c0a5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 41.147
+      objectReference: {fileID: 0}
+    - target: {fileID: 854250953301662029, guid: 4d8eb4382e355b249a19c1e417f3c0a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 652.1399
+      objectReference: {fileID: 0}
+    - target: {fileID: 854250953301662029, guid: 4d8eb4382e355b249a19c1e417f3c0a5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 854250953301662029, guid: 4d8eb4382e355b249a19c1e417f3c0a5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 854250953301662029, guid: 4d8eb4382e355b249a19c1e417f3c0a5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 854250953301662029, guid: 4d8eb4382e355b249a19c1e417f3c0a5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 854250953301662029, guid: 4d8eb4382e355b249a19c1e417f3c0a5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 854250953301662029, guid: 4d8eb4382e355b249a19c1e417f3c0a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 854250953301662029, guid: 4d8eb4382e355b249a19c1e417f3c0a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 854250953301662029, guid: 4d8eb4382e355b249a19c1e417f3c0a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4d8eb4382e355b249a19c1e417f3c0a5, type: 3}
