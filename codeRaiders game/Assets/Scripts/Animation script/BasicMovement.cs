@@ -88,12 +88,20 @@ public class BasicMovement : MonoBehaviour
     }
     void Aim()
     {
-        if (movementDirection != Vector2.zero)
-        {
-            crosshair.transform.localPosition = movementDirection * CROSSHAIR_DISTANCE;
-        }
+        Vector2 aim = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
+        if (aim != Vector2.zero)
+        {
+            if (aim.magnitude > 0.0f)
+            {
+                aim.Normalize();
+                crosshair.transform.localPosition = aim * CROSSHAIR_DISTANCE;
+
+            }
+            //crosshair.transform.localPosition = aim * Crosshair_Distance;
+        }
     }
+
     void FixedUpdate()
     {
 
@@ -113,8 +121,10 @@ public class BasicMovement : MonoBehaviour
 
     }
 
-
 }
+
+
+
 /*void Start()
 {
     rb = GetComponent<Rigidbody2D>();
