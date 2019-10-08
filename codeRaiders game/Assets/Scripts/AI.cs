@@ -57,11 +57,19 @@ public class AI : MonoBehaviour
         {
             other.gameObject.GetComponent<Health>().DealDamage(6);
         }
+        else{
+            if (other.gameObject.CompareTag("bullet")){
+                Destroy(this.gameObject);
+            }
+        }
     }
+
     public void takeDamage(float number)
     {
         Debug.Log("Ouch!");
         health = health - number;
+        
+        
     }
 
 }

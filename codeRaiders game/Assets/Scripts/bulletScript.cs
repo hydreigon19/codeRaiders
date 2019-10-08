@@ -5,6 +5,15 @@ using UnityEngine;
 public class bulletScript : MonoBehaviour
 {
     public float amount_damage = 2;
+    
+    //vid lines
+    private Rigidbody2D rb;
+    private Vector2 screenBounds;
+    
+    void Start()
+    {
+        rb = this.GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
@@ -16,6 +25,7 @@ public class bulletScript : MonoBehaviour
         if (other.gameObject.CompareTag("enemy"))
         {
             other.gameObject.GetComponent<AI>().takeDamage(amount_damage);
+            
         }
     }
 }

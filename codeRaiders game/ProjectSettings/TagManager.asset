@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - enemy
+  - bullet
+  - interObject
   layers:
   - Default
   - TransparentFX
@@ -45,6 +47,12 @@ TagManager:
   - name: Floor
     uniqueID: 3344010257
     locked: 0
+  - name: Wall
+    uniqueID: 212882817
+    locked: 0
   - name: Main Character
     uniqueID: 2882830543
+    locked: 0
+  - name: Enemy
+    uniqueID: 3713145499
     locked: 0
