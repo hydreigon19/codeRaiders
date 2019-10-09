@@ -32,7 +32,23 @@ public class Health : MonoBehaviour
         //    DealDamage(6);
         //}
     }
+    public void SetHealth(float health)
+    {
+        if (CurrentHealth < 100)
+        {
+            CurrentHealth = CurrentHealth + health;
 
+            HealthBar.value = CalculatedHealth();
+        }
+        else
+        {
+           
+        }
+
+
+
+
+    }
     public void DealDamage(float damage)
     {
         if (CurrentHealth > 0)

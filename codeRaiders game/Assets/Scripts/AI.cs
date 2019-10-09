@@ -8,9 +8,8 @@ public class AI : MonoBehaviour
     public float speed;
     public float stoppingDistance;
     private Transform target;
-    public float health = 10;
-    
-    
+    public float health = 100;
+    public GameObject healthitem;
     private Vector2 movement;
     private Vector3 direction;
     private Rigidbody2D rb;
@@ -55,21 +54,28 @@ public class AI : MonoBehaviour
         Debug.Log("Fire");  
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Health>().DealDamage(6);
+           other.gameObject.GetComponent<Health>().DealDamage(6);
         }
-        else{
+        /*else{
             if (other.gameObject.CompareTag("bullet")){
-                Destroy(this.gameObject);
-            }
-        }
+                this.gameObject.GetComponent<AI>().takeDamage(1);
+            }*/
+        
     }
 
     public void takeDamage(float number)
     {
-        Debug.Log("Ouch!");
-        health = health - number;
-        
-        
+        if (health > 0)
+        {
+            Debug.Log("Ouch!");
+            health = health - number;
+        }
+        else
+        {
+            Debug.Log("EnemyDead!");
+            Instantiate(healthitem,transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
+        }
     }
-
 }
+

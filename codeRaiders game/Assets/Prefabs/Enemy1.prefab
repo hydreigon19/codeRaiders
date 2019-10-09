@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -581821797
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7199540442557683637, guid: 38fc14376338be840be3f4626726dbf5,
     type: 3}
@@ -140,6 +140,8 @@ MonoBehaviour:
   speed: 3
   stoppingDistance: 1
   health: 10
+  healthitem: {fileID: 1686114545021123721, guid: 32ca9f0e42036784196988aba9843deb,
+    type: 3}
   animator: {fileID: 6268749718474564880}
 --- !u!61 &6268749718474564908
 BoxCollider2D:
