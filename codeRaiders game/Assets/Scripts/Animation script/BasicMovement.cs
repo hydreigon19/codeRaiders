@@ -15,9 +15,10 @@ public class BasicMovement : MonoBehaviour
     public float CROSSHAIR_DISTANCE = 1.0f;
     public float BULLET_BASE_SPEED = 1.0f;
     public float AIMING_BASE_PENALTY = 1.0f;
+    public float SHOOTING_RECOIL_TIME = 1.0f;
     //-----------------------------------//
     //----Character stats--------------//
-    public Vector3 movementDirection;
+    public Vector2 movementDirection;
     public Vector2 mouseMovement;
     public float movementSpeed;
     public bool endOfAiming;
@@ -56,13 +57,25 @@ public class BasicMovement : MonoBehaviour
     {
 
 
-        movementDirection = new Vector3(Input.GetAxis("Horizontal") * movementSpeed, Input.GetAxis("Vertical") * movementSpeed, 0.0f);
+        movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         // rb.AddForce(movementDirection * movementSpeed);
-        //   movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f, 1.0f);
-        //  movementDirection.Normalize();
-        endOfAiming = Input.GetButton("Fire1");
-        IsAiming = Input.GetButton("Fire1");
+        movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f, 1.0f);
+        movementDirection.Normalize();
+        endOfAiming = Input.GetButtonUp("Fire1");
+        IsAiming = Input.GetButtonUp("Fire1");
         // lockPosition = Input.GetButton("LockPosition");
+        if(IsAiming)
+        {
+            movementSpeed += AIMING_BASE_PENALTY;
+        }
+        if(endOfAiming)
+        {
+            shootingRecoil = SHOOTING_RECOIL_TIME;
+        }
+        if(shootingRecoil>0.0f)
+        {
+            shootingRecoil -= Time.deltaTime;
+        }
 
 
 
@@ -71,22 +84,40 @@ public class BasicMovement : MonoBehaviour
     {
 
 
-        //  rb.velocity = movementDirection * movementSpeed * MOVEMENT_BASE_SPEED;
-        rb.AddForce(movementDirection * movementSpeed);
+       rb.velocity = movementDirection * movementSpeed * MOVEMENT_BASE_SPEED;
+       //rb.AddForce(movementDirection * movementSpeed);
 
 
     }
     void Animate()
     {
-        if (movementDirection != Vector3.zero)
+        if (movementDirection != Vector2.zero)
         {
             animator.SetFloat("Horizontal", movementDirection.x);
             animator.SetFloat("Vertical", movementDirection.y);
 
         }
-
+       
+         if (shootingRecoil > 0.0f)
+        {
+            animator.SetFloat("AimingState", 1.0f);
+        }
+         else if(shootingRecoil>0.0f && movementSpeed == 0)
+        {
+            animator.SetFloat("AimingState",2.0f);
+        }
+        else if(movementSpeed > 0)
+        {
+            animator.SetFloat("AimingState",.5f);
+            
+        }
+        else
+        {
+            animator.SetFloat("AimingState", 0.0f);
+        }
         animator.SetFloat("Magnitude", movementDirection.magnitude);
-        transform.position = transform.position + movementDirection * Time.deltaTime;
+        animator.SetFloat("Speed", movementSpeed);
+      //  transform.position = transform.position + movementDirection * Time.deltaTime;
 
     }
     void Aim()
