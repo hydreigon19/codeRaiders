@@ -17,6 +17,7 @@ public class bulletScript : MonoBehaviour
         {
           other.gameObject.GetComponent<AI>().takeDamage(amount_damage);
 
+
         }
       }
     }

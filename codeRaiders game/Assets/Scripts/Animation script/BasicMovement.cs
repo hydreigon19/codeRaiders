@@ -61,13 +61,10 @@ public class BasicMovement : MonoBehaviour
         // rb.AddForce(movementDirection * movementSpeed);
         movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f, 1.0f);
         movementDirection.Normalize();
-        endOfAiming = Input.GetButtonUp("Fire1");
-        IsAiming = Input.GetButtonUp("Fire1");
+        endOfAiming = Input.GetButton("Fire1");
+        IsAiming = Input.GetButton("Fire1");
         // lockPosition = Input.GetButton("LockPosition");
-        if(IsAiming)
-        {
-            movementSpeed += AIMING_BASE_PENALTY;
-        }
+      
         if(endOfAiming)
         {
             shootingRecoil = SHOOTING_RECOIL_TIME;

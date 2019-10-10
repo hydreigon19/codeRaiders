@@ -34,6 +34,17 @@ public class AI : MonoBehaviour
             animator.SetFloat("Vertical", direction.y);
 
         }
+        if (speed > 0)
+        {
+            animator.SetFloat("AimingState", 1.0f);
+        }
+        
+        else
+        {
+            animator.SetFloat("AimingState", 0.0f);
+        
+    }
+        
         animator.SetFloat("Magnitude", direction.magnitude);
         
         //this was changed so the movement is correct
@@ -73,7 +84,9 @@ public class AI : MonoBehaviour
         else
         {
             Debug.Log("EnemyDead!");
-            Instantiate(healthitem,transform.position, Quaternion.identity);
+            
+            Instantiate(healthitem,transform.position, Quaternion.identity);//spawns potion when enemy dies
+           // animator.SetFloat("DeathState", .5f);
             gameObject.SetActive(false);
         }
     }
