@@ -115,7 +115,7 @@ public class AI : MonoBehaviour
                 Spawn();
                 itemSpawned++;
                 Debug.Log("EnemyDeadSpawned !" + itemSpawned);
-                gameObject.SetActive(false);
+                Destroy(gameObject);
             }
             else
             {
