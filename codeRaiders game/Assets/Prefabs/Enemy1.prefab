@@ -143,7 +143,7 @@ MonoBehaviour:
   healthitem: {fileID: 1686114545021123721, guid: 32ca9f0e42036784196988aba9843deb,
     type: 3}
   startTime: 0
-  TimeDelay: 5
+  TimeDelay: 10
   CheckSpawn: 0
   itemSpawned: 0
   animator: {fileID: 6268749718474564880}
