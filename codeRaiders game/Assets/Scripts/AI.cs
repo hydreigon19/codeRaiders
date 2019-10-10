@@ -11,9 +11,16 @@ public class AI : MonoBehaviour
     public float health = 100;
     public GameObject healthitem;
     private Vector2 movement;
+
+    public float startTime;
+    public float TimeDelay;
+    public bool CheckSpawn ;
     private Vector3 direction;
+    public int itemSpawned = 0;
+
     private Rigidbody2D rb;
     public Animator animator;
+
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -52,7 +59,20 @@ public class AI : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
-        
+        if (TimeDelay <= 0)
+        {
+           
+            CheckSpawn = true;
+            TimeDelay = startTime;
+          //  Debug.Log("Start Time : "+startTime+" Time Delay Update: " + TimeDelay);
+            
+        }
+        else
+        {
+            TimeDelay -= Time.time;
+           // Debug.Log("StartTime "+startTime+" Time Delay Update when time is not 0: " + TimeDelay);
+            CheckSpawn = false;
+        }
     }
     
     void moveCharacter(Vector2 direction)
@@ -62,7 +82,7 @@ public class AI : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Fire");  
+        //Debug.Log("Fire");  
         if (other.gameObject.CompareTag("Player"))
         {
            other.gameObject.GetComponent<Health>().DealDamage(6);
@@ -73,21 +93,37 @@ public class AI : MonoBehaviour
             }*/
         
     }
+    public void Spawn()
+    {
+        Instantiate(healthitem, transform.position, Quaternion.identity);//spawns potion when enemy dies
+       // itemSpawned++;
+
+
+    }
 
     public void takeDamage(float number)
     {
         if (health > 0)
         {
-            Debug.Log("Ouch!");
+            //Debug.Log("Ouch!");
             health = health - number;
         }
         else
         {
-            Debug.Log("EnemyDead!");
-            
-            Instantiate(healthitem,transform.position, Quaternion.identity);//spawns potion when enemy dies
-           // animator.SetFloat("DeathState", .5f);
-            gameObject.SetActive(false);
+            if(CheckSpawn)
+            {
+                Spawn();
+                itemSpawned++;
+                Debug.Log("EnemyDeadSpawned !" + itemSpawned);
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                Instantiate(healthitem,transform.position, Quaternion.identity);//spawns potion when enemy dies
+           
+                Destroy(gameObject);
+
+            }
         }
     }
 }

@@ -61,8 +61,8 @@ public class BasicMovement : MonoBehaviour
         // rb.AddForce(movementDirection * movementSpeed);
         movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f, 1.0f);
         movementDirection.Normalize();
-        endOfAiming = Input.GetButton("Fire1");
-        IsAiming = Input.GetButton("Fire1");
+        endOfAiming = Input.GetKeyDown(KeyCode.Space);
+        //IsAiming = Input.GetButton("Fire1");
         // lockPosition = Input.GetButton("LockPosition");
       
         if(endOfAiming)
@@ -154,70 +154,3 @@ public class BasicMovement : MonoBehaviour
 
 }
 
-
-
-/*void Start()
-{
-    rb = GetComponent<Rigidbody2D>();
-}
-
-// Update is called once per frame
-
-void Update()
-{
-
-    Vector3 movement = new Vector3(Input.GetAxis("Horizontal") * movementSpeed, Input.GetAxis("Vertical") * movementSpeed, 0.0f);
-
-
-    rb.AddForce(movement * movementSpeed);
-
-    MoveCrossHair();
-
-
-    if (movement != Vector3.zero)
-    {
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-
-    }
-    animator.SetFloat("Magnitude", movement.magnitude);
-    transform.position = transform.position + movement * Time.deltaTime;
-
-       endOfAiming = Input.GetButtonUp("Fire1");
-       Shoot();
-
-    // transform.position = transform.position + vertical * Time.deltaTime;
-}
-void FixedUpdate()//move our character
-{
-
-}
-
-void MoveCrossHair(){
-    Vector2 aim = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-
-    if(aim != Vector2.zero){
-        if(aim.magnitude > 0.0f){
-            aim.Normalize();
-            crosshair.transform.localPosition = aim * CROSSHAIR_DISTANCE;
-
-        }
-        //crosshair.transform.localPosition = aim * Crosshair_Distance;
-    }
-}
-
-void Shoot(){
-    Vector2 shootingDirection = crosshair.transform.localPosition;
-    shootingDirection.Normalize();
-
-    if(endOfAiming){
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-        bullet.GetComponent<Rigidbody2D>().velocity = shootingDirection * BULLET_BASE_SPEED;
-        bullet.transform.Rotate(0,0, Mathf.Atan2(shootingDirection.y, shootingDirection.x)* Mathf.Rad2Deg);
-        Destroy(bullet, 2.0f);
-    }
-
-}
-
-}
-*/

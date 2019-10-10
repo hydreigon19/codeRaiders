@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bulletScript : MonoBehaviour
 {
-    public float amount_damage = .5f;
+    public float amount_damage = 0.5f;
 
     void Update()
     {
@@ -16,8 +16,6 @@ public class bulletScript : MonoBehaviour
         if (other.gameObject.CompareTag("enemy"))
         {
           other.gameObject.GetComponent<AI>().takeDamage(amount_damage);
-
-
         }
       }
     }

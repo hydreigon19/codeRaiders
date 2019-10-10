@@ -19,11 +19,9 @@ public class PlayerInteract : MonoBehaviour
     {
         if(other.CompareTag("interObject"))
         {
-           
-            Debug.Log("Health");
-            // other.gameObject.GetComponent<Health>().DealDamage(6);
-            this.gameObject.GetComponent<Health>().SetHealth(6);
+            this.gameObject.GetComponent<Health>().getHealth();
             currentInterObj = other.gameObject;//stores what ever the object is
+            this.gameObject.GetComponent<Health>().SetHealth(6);
         }
        
     }
