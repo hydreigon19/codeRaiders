@@ -4376,7 +4376,7 @@ MonoBehaviour:
   - {fileID: 637875210}
   - {fileID: 2002263017}
   - {fileID: 760597097}
-  startTimeBtwSpawns: 3
+  startTimeBtwSpawns: 3.5
   timeBtwSpawns: 0
 --- !u!4 &1290533019
 Transform:
