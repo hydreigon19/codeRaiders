@@ -16,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
@@ -55,4 +55,10 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 3713145499
+    locked: 0
+  - name: rocks
+    uniqueID: 489139915
+    locked: 0
+  - name: lava
+    uniqueID: 2982228835
     locked: 0
