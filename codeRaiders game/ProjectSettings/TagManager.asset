@@ -47,10 +47,10 @@ TagManager:
   - name: Floor
     uniqueID: 3344010257
     locked: 0
-  - name: Wall
+  - name: Main Character
     uniqueID: 212882817
     locked: 0
-  - name: Main Character
+  - name: Wall
     uniqueID: 2882830543
     locked: 0
   - name: Enemy
