@@ -143,10 +143,13 @@ MonoBehaviour:
   healthitem: {fileID: 1686114545021123721, guid: 32ca9f0e42036784196988aba9843deb,
     type: 3}
   startTime: 0
-  TimeDelay: 10
+  TimeDelay: 50
   CheckSpawn: 0
   itemSpawned: 0
   animator: {fileID: 6268749718474564880}
+  effect: {fileID: 6143397966539000445, guid: 73fbde28793c0b04b8576379e571dfde, type: 3}
+  cameraShake: {fileID: 2755356989873726892, guid: d47cfad6d1d08ac4790f8b2e6adedc71,
+    type: 3}
 --- !u!61 &6268749718474564908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -160,7 +163,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.104322195, y: 0.05961263}
+  m_Offset: {x: 0.104322195, y: 0.0059461594}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -171,5 +174,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.732841, y: 0.92633796}
+  m_Size: {x: 0.732841, y: 0.819005}
   m_EdgeRadius: 0

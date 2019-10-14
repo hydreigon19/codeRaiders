@@ -21,20 +21,26 @@ public class AI : MonoBehaviour
     private Rigidbody2D rb;
     public Animator animator;
 
+    public GameObject effect;
+    public CameraShake cameraShake;
+    
+
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = this.GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        rb.AddForce(direction * speed); //do we need this??
+        //rb.AddForce(direction * speed); //do we need this??
 
         //should be part of the animation but something is off
         direction = target.position - transform.position;
+
         if (direction != Vector3.zero)
         {
             animator.SetFloat("Horizontal", direction.x);
@@ -86,11 +92,10 @@ public class AI : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
            other.gameObject.GetComponent<Health>().DealDamage(6);
+           StartCoroutine(cameraShake.Shake(.10f, .4f));
+           
         }
-        /*else{
-            if (other.gameObject.CompareTag("bullet")){
-                this.gameObject.GetComponent<AI>().takeDamage(1);
-            }*/
+        
         
     }
     public void Spawn()
@@ -110,6 +115,9 @@ public class AI : MonoBehaviour
         }
         else
         {
+            Instantiate(effect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            /* 
             if(CheckSpawn)
             {
                 Spawn();
@@ -120,10 +128,12 @@ public class AI : MonoBehaviour
             else
             {
                 Instantiate(healthitem,transform.position, Quaternion.identity);//spawns potion when enemy dies
-           
+                
+                
                 Destroy(gameObject);
 
             }
+            */
         }
     }
 }

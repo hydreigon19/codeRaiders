@@ -112,7 +112,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3631395555101159871}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f8570cfd6fe5d4989410846b7f99bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount_damage: 1
+  amount_damage: 2
 --- !u!58 &5009730135419695988
 CircleCollider2D:
   m_ObjectHideFlags: 0

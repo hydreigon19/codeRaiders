@@ -37,6 +37,8 @@ public class BasicMovement : MonoBehaviour
     public Vector2 mousePos;
     Vector3 target;
 
+    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -48,7 +50,11 @@ public class BasicMovement : MonoBehaviour
         Move();
         Animate();
         Aim();
+
+       
         Shoot();
+        
+        
 
 
 
@@ -58,12 +64,15 @@ public class BasicMovement : MonoBehaviour
 
 
         movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        // rb.AddForce(movementDirection * movementSpeed);
         movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f, 1.0f);
         movementDirection.Normalize();
-        endOfAiming = Input.GetKeyDown(KeyCode.Space);
-        //IsAiming = Input.GetButton("Fire1");
-        // lockPosition = Input.GetButton("LockPosition");
+        
+
+        //INTITIAL SHOOT
+        
+        endOfAiming = Input.GetKeyDown("space");
+        IsAiming = Input.GetKeyDown("space");
+        //lockPosition = Input.GetButton("LockPosition");
       
         if(endOfAiming)
         {
@@ -73,7 +82,7 @@ public class BasicMovement : MonoBehaviour
         {
             shootingRecoil -= Time.deltaTime;
         }
-
+        
 
 
     }
@@ -127,18 +136,15 @@ public class BasicMovement : MonoBehaviour
             {
                 aim.Normalize();
                 crosshair.transform.localPosition = aim * CROSSHAIR_DISTANCE;
-
             }
-            //crosshair.transform.localPosition = aim * Crosshair_Distance;
         }
     }
 
-    void FixedUpdate()
-    {
-
-    }
     void Shoot()
     {
+        
+        //INITIAL SHOOT
+        
         Vector2 shootingDirection = crosshair.transform.localPosition;
         shootingDirection.Normalize();
 
@@ -149,7 +155,7 @@ public class BasicMovement : MonoBehaviour
             bullet.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
             Destroy(bullet, 2.0f);
         }
-
+    
     }
 
 }

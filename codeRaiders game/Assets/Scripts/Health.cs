@@ -57,7 +57,9 @@ public class Health : MonoBehaviour
         }
         else
         {
+
             gameObject.SetActive(false);
+            Application.Quit();
         }
 
         
