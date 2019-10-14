@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5267f40ee463fe43bc01eeafcd808c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: 1
+  ItemType: HealthPotion
 --- !u!58 &2371681841754809642
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -5,8 +5,10 @@ using UnityEngine;
 public class InteractionObject : MonoBehaviour
 {
     // Start is called before the first frame update
-    
+
     //??
+    public bool inventory;
+    public string ItemType = "";
     public void DoInteraction()
     {
         

@@ -17,18 +17,25 @@ public class AI : MonoBehaviour
     public bool CheckSpawn ;
     private Vector3 direction;
     public int itemSpawned = 0;
-
+    public bool found;
     private Rigidbody2D rb;
     public Animator animator;
-
+    public GameObject player;
     public GameObject effect;
     public CameraShake cameraShake;
-    
+    float curTime = 0;
+    float nextDamage = 1;
+    float curTimeDrop = 0;
+    float nextTime = 15;
 
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = this.GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        CheckSpawn = false;
+        found = false;
+
         
     }
 
@@ -65,6 +72,39 @@ public class AI : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
+        if (found == true)//Credits to JT..I used the same exact structure as his code from the lava_damage script// this is a timer for when the enemy is touching player the health goes down
+        {
+            if (curTime <= 0)
+            {
+                player.GetComponent<Health>().DealDamage(6);
+
+                curTime = nextDamage;
+            }
+            else
+            {
+
+                curTime -= Time.deltaTime;
+                }
+            
+ 
+        }
+       /* if (CheckSpawn == true)
+        {
+            if (curTimeDrop <= 0)
+            {
+
+                Spawn();
+                curTimeDrop = nextTime;
+            }
+            else
+            {
+
+                curTimeDrop -= Time.deltaTime;
+                CheckSpawn = false;
+            }
+
+
+        }*/
         if (TimeDelay <= 0)
         {
            
@@ -91,7 +131,8 @@ public class AI : MonoBehaviour
         //Debug.Log("Fire");  
         if (other.gameObject.CompareTag("Player"))
         {
-           other.gameObject.GetComponent<Health>().DealDamage(6);
+            found = true;//bool to see if enemy is touching player
+      
            
            //trigger camera shake
            /*currently only works when prefab is on scene but not when
@@ -102,9 +143,17 @@ public class AI : MonoBehaviour
         
         
     }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            found = false;
+        }
+    }
 
-    //spawn function
-    public void Spawn()
+
+//spawn function
+public void Spawn()
     {
         //spawns potion when enemy dies
         Instantiate(healthitem, transform.position, Quaternion.identity);
@@ -122,32 +171,32 @@ public class AI : MonoBehaviour
             health = health - number;
         }
         else
-        {   
+        {
             //when enemy has 0 health
             //triggers particle effects
-            Instantiate(effect, transform.position, Quaternion.identity);
-
+           /* Instantiate(effect, transform.position, Quaternion.identity);
+           
             //deletes enemy object
-            Destroy(gameObject);
-            
+            Destroy(gameObject);*/
+
             //item spawn; probably need to implement differently
-            /* 
-            if(CheckSpawn)
+            
+            if(CheckSpawn)//needs to be fixed
             {
                 Spawn();
+                Instantiate(effect, transform.position, Quaternion.identity);
                 itemSpawned++;
                 Debug.Log("EnemyDeadSpawned !" + itemSpawned);
                 Destroy(gameObject);
             }
             else
             {
-                Instantiate(healthitem,transform.position, Quaternion.identity);//spawns potion when enemy dies
-                
-                
+             
+                   
                 Destroy(gameObject);
 
             }
-            */
+            
         }
     }
 }
