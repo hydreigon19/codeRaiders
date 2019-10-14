@@ -20,7 +20,8 @@ public class PlayerInteract : MonoBehaviour
         if(other.CompareTag("interObject"))
         {
             this.gameObject.GetComponent<Health>().getHealth();
-            currentInterObj = other.gameObject;//stores what ever the object is
+            //stores what ever the object is
+            currentInterObj = other.gameObject;
             this.gameObject.GetComponent<Health>().SetHealth(6);
         }
        

@@ -69,7 +69,6 @@ public class BasicMovement : MonoBehaviour
         
 
         //INTITIAL SHOOT
-        
         endOfAiming = Input.GetKeyDown("space");
         IsAiming = Input.GetKeyDown("space");
         //lockPosition = Input.GetButton("LockPosition");
@@ -126,6 +125,8 @@ public class BasicMovement : MonoBehaviour
       //  transform.position = transform.position + movementDirection * Time.deltaTime;
 
     }
+
+    //crosshair distance
     void Aim()
     {
         Vector2 aim = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
@@ -140,14 +141,15 @@ public class BasicMovement : MonoBehaviour
         }
     }
 
+    //shoot function
     void Shoot()
     {
         
         //INITIAL SHOOT
-        
         Vector2 shootingDirection = crosshair.transform.localPosition;
         shootingDirection.Normalize();
 
+        //probably need to rewrite
         if (endOfAiming)
         {
             GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);

@@ -92,16 +92,24 @@ public class AI : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
            other.gameObject.GetComponent<Health>().DealDamage(6);
-           StartCoroutine(cameraShake.Shake(.10f, .4f));
+           
+           //trigger camera shake
+           /*currently only works when prefab is on scene but not when
+           they are spawning*/
+           //StartCoroutine(cameraShake.Shake(.10f, .4f));
            
         }
         
         
     }
+
+    //spawn function
     public void Spawn()
     {
-        Instantiate(healthitem, transform.position, Quaternion.identity);//spawns potion when enemy dies
-       // itemSpawned++;
+        //spawns potion when enemy dies
+        Instantiate(healthitem, transform.position, Quaternion.identity);
+        //spawns potion when enemy dies
+        
 
 
     }
@@ -114,9 +122,15 @@ public class AI : MonoBehaviour
             health = health - number;
         }
         else
-        {
+        {   
+            //when enemy has 0 health
+            //triggers particle effects
             Instantiate(effect, transform.position, Quaternion.identity);
+
+            //deletes enemy object
             Destroy(gameObject);
+            
+            //item spawn; probably need to implement differently
             /* 
             if(CheckSpawn)
             {
