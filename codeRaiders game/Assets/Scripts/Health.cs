@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
     public float MaxHealth { get; set; }
     public float CurrentHealth { get; set; }
 
+    public CameraShake cameraShake;
+
 
     // Use this for initialization
     void Start()
@@ -52,6 +54,8 @@ public class Health : MonoBehaviour
         if (CurrentHealth > 0)
         {
             CurrentHealth = CurrentHealth - damage;
+            StartCoroutine(cameraShake.Shake(.10f, .4f));
+
 
             HealthBar.value = CalculatedHealth();
         }
@@ -59,7 +63,7 @@ public class Health : MonoBehaviour
         {
 
             gameObject.SetActive(false);
-            Application.Quit();
+            
         }
 
         

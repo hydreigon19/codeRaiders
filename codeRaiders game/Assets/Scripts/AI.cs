@@ -21,8 +21,10 @@ public class AI : MonoBehaviour
     private Rigidbody2D rb;
     public Animator animator;
     public GameObject player;
+
     public GameObject effect;
-    public CameraShake cameraShake;
+    //public CameraShake cameraShake;
+
     float curTime = 0;
     float nextDamage = 1;
     float curTimeDrop = 0;
