@@ -7,6 +7,7 @@ TagManager:
   - enemy
   - bullet
   - interObject
+  - lava
   layers:
   - Default
   - TransparentFX
