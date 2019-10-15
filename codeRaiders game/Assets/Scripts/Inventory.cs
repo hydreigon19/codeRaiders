@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public GameObject[] inventory = new GameObject[10];
-    public Button[] InventoryButtons = new Button[10];
+    public GameObject[] inventory = new GameObject[4];
+    public Button[] InventoryButtons = new Button[4];
     public void AddItem(GameObject item)
     {
         bool itemAdded = false;//bool to see if item can be added or not
