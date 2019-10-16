@@ -174,6 +174,7 @@ public void Spawn()
         }
         else
         {
+            Score.scoreAmount += 1;
             //when enemy has 0 health
             //triggers particle effects
            /* Instantiate(effect, transform.position, Quaternion.identity);
