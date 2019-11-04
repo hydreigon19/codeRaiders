@@ -13,6 +13,8 @@ public class Health : MonoBehaviour
 
     public CameraShake cameraShake;
 
+    public GameObject menuContainer;
+
 
     // Use this for initialization
     void Start()
@@ -61,8 +63,11 @@ public class Health : MonoBehaviour
         }
         else
         {
-
+            
+            //player is dead
             gameObject.SetActive(false);
+            //GAME OVER
+            menuContainer.SetActive(true);
             
         }
 

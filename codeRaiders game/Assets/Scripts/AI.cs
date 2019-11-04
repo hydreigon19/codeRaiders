@@ -72,6 +72,8 @@ public class AI : MonoBehaviour
         //this was changed so the movement is correct
         if(Vector2.Distance(transform.position, target.position) > stoppingDistance)
         {
+            //hitstun code possibly here
+
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
         if (found == true)//Credits to JT..I used the same exact structure as his code from the lava_damage script// this is a timer for when the enemy is touching player the health goes down
@@ -79,6 +81,8 @@ public class AI : MonoBehaviour
             if (curTime <= 0)
             {
                 player.GetComponent<Health>().DealDamage(6);
+
+                //hitstun code possibly here
 
                 curTime = nextDamage;
             }
