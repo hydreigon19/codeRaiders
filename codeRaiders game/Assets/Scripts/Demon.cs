@@ -46,6 +46,7 @@ public class Demon : MonoBehaviour
         {
             timeBtwShots -=Time.deltaTime;
         }
+        
         death();
     }
     void OnTriggerEnter2D(Collider2D other)

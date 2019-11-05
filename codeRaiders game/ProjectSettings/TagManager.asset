@@ -8,6 +8,8 @@ TagManager:
   - bullet
   - interObject
   - lava
+  - healthPotion
+  - wall
   layers:
   - Default
   - TransparentFX

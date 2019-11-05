@@ -16,6 +16,15 @@ public class bulletScript : MonoBehaviour
         if (other.gameObject.CompareTag("enemy"))
         {
           other.gameObject.GetComponent<AI>().takeDamage(amount_damage);
+          DestroyProjectile();
         }
-      }
+        if( other.gameObject.CompareTag("wall"))
+        {
+          DestroyProjectile();
+        }
     }
+    void DestroyProjectile()
+    {
+        Destroy(this.gameObject);
+    }
+}

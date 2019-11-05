@@ -5,67 +5,54 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public GameObject[] inventory = new GameObject[4];
-    public Button[] InventoryButtons = new Button[4];
+    public GameObject[] inventory;
+    public Button[] InventoryButtons;
+    public int[] itemCount;
+    public bool[] hasItem;
+   
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            if (itemCount[0] > 0)
+            {
+                this.GetComponent<Health>().SetHealth(6);//set user health 
+                itemCount[0] -= 1;
+            }
+        }
+        if (itemCount[0] == 0)
+        {
+            hasItem[0] = false;
+            InventoryButtons[0].image.overrideSprite = null;
+        }
+    }
     public void AddItem(GameObject item)
     {
-        bool itemAdded = false;//bool to see if item can be added or not
-        for (int i = 0; i < inventory.Length; i++)
-        {
-            if (inventory[i] == null)//if inventory isn't full
+            if (item.CompareTag("healthPotion"))
             {
-                inventory[i] = item;//add item to inventory
-                InventoryButtons[i].image.overrideSprite = item.GetComponent<SpriteRenderer>().sprite;//adds sprite to the item
-                Debug.Log(item.name + "was added");
-                itemAdded = true;//item added to inventory is true
-                item.SendMessage("DoInteraction");
-                break;
-            }
-        }
-        if (!itemAdded)//if item wasn't added is because inventory  is full
-        {
-            Debug.Log("Inventory full");
-        }
-
-    }
-    public bool FindItem(GameObject item)
-    {
-        for (int i = 0; i < inventory.Length; i++)
-        {
-            if (inventory[i] == item)
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public GameObject FindItemByType(string itemType)//searches the item by type so if it's healthpotion then it'll find the health prefab
-    {
-        for (int i = 0; i < inventory.Length; i++)
-        {
-            if (inventory[i] != null)
-            {
-                if (inventory[i].GetComponent<InteractionObject>().ItemType == itemType)//if the string that it selects is equal to the string of the prefab
+                if(hasItem[0]==false)
                 {
-                    return inventory[i];//if itemtype is equal to the paramter then give the value of that inventory item
+                    inventory[0] = item;//add item to inventory
+                    InventoryButtons[0].image.overrideSprite = item.GetComponent<SpriteRenderer>().sprite;//adds sprite to the item
+                    itemCount[0] += 1;
+                    hasItem[0] = true;
+                    Debug.Log(item.name + "was added");
+                    Destroy(item);
                 }
+                else
+                {
+                    itemCount[0] += 1;
+                    Destroy(item);
+                }
+   
             }
-        }
-        return null;
-    }
-    public void RemoveItem(GameObject item)
+    } 
+    void OnTriggerEnter2D(Collider2D other)
     {
-        for (int i = 0; i < inventory.Length; i++)
+        if (other.CompareTag("healthPotion"))
         {
-            if (inventory[i] == item)//if the item is found from the array slot
-            {
-                inventory[i] = null;
-                Debug.Log(item.name + " Removed");
-                InventoryButtons[i].image.overrideSprite = null;
-                break;
-            }
 
+            AddItem(other.gameObject);
         }
     }
 
