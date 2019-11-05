@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8149779013652717070}
   m_Layer: 0
   m_Name: pitchfork_0
-  m_TagString: enemy
+  m_TagString: pitchfork
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

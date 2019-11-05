@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     private Transform player;
     private Vector2 target;
     public int damageAmount;
+    private int secToDestroy;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,18 +19,26 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        if(transform.position.x==target.x && transform.position.y == target.y)
+        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        if (transform.position.x == target.x && transform.position.y == target.y)
         {
-             DestroyProjectile();
+            DestroyProjectile();
+        }
+        else
+        {
+            Destroy(this.gameObject, 2.0f);
         }
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             player.GetComponent<Health>().DealDamage(damageAmount);
             FindObjectOfType<AudioManager>().Play("Enemy Hurt");
+            DestroyProjectile();
+        }
+        if(other.CompareTag("bullet"))
+        {
             DestroyProjectile();
         }
     }

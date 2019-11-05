@@ -5,6 +5,7 @@ using UnityEngine;
 public class bulletScript : MonoBehaviour
 {
     public float amount_damage = 0.5f;
+   
 
     void Update()
     {
@@ -16,15 +17,16 @@ public class bulletScript : MonoBehaviour
         if (other.gameObject.CompareTag("enemy"))
         {
           other.gameObject.GetComponent<AI>().takeDamage(amount_damage);
-          DestroyProjectile();
+          Destroy(this.gameObject);
         }
-        if( other.gameObject.CompareTag("wall"))
+        else if (other.gameObject.CompareTag("Boss"))
         {
-          DestroyProjectile();
+            other.gameObject.GetComponent<Boss>().takeDamage(amount_damage);
+            Destroy(this.gameObject);
+        }
+        else if (other.gameObject.CompareTag("pitchfork"))
+        {
+            Destroy(this.gameObject);
         }
     }
-    void DestroyProjectile()
-    {
-        Destroy(this.gameObject);
     }
-}

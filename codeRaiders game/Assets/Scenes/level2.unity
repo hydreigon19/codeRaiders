@@ -2299,11 +2299,13 @@ GameObject:
   - component: {fileID: 594551352}
   - component: {fileID: 594551351}
   - component: {fileID: 594551350}
+  - component: {fileID: 594551354}
   - component: {fileID: 594551349}
   - component: {fileID: 594551353}
+  - component: {fileID: 594551355}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2341,7 +2343,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594551348}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16706090546054dbfad1a81cdefbd088, type: 3}
   m_Name: 
@@ -2441,6 +2443,55 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &594551354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594551348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1266e69fc658e0c46b383adfb4e9fadd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  stoppingDistance: 5
+  health: 50
+  healthitem: {fileID: 1686114545021123721, guid: 32ca9f0e42036784196988aba9843deb,
+    type: 3}
+  retreatDistance: 10
+  startTime: 0
+  TimeDelay: 0
+  CheckSpawn: 0
+  itemSpawned: 0
+  found: 0
+  timeBtwShots: 1
+  startTimeBtwShots: 2
+  animator: {fileID: 594551355}
+  player: {fileID: 0}
+  projectile: {fileID: 8892196589775213687, guid: 9aa85b6d0766b446385ff79fccc5437a,
+    type: 3}
+  effect: {fileID: 6143397966539000445, guid: 73fbde28793c0b04b8576379e571dfde, type: 3}
+--- !u!95 &594551355
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594551348}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e24c39a92e62cdf40901e823a1a0fe86, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &637875209
 GameObject:
   m_ObjectHideFlags: 0

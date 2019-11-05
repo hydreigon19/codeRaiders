@@ -102,7 +102,7 @@ public class AI : MonoBehaviour
             {
 
                 curTime -= Time.deltaTime;
-                }
+            }
             
  
         }
