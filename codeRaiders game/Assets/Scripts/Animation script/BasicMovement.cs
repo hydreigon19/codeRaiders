@@ -152,12 +152,16 @@ public class BasicMovement : MonoBehaviour
         //probably need to rewrite
         if (endOfAiming)
         {
+            
+            FindObjectOfType<AudioManager>().Play("Shoot");
+
             GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = shootingDirection * BULLET_BASE_SPEED;
             bullet.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
+           
             Destroy(bullet, 2.0f);
         }
-    
+        
     }
 
 }

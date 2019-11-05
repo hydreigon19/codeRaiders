@@ -29,6 +29,7 @@ public class Projectile : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             player.GetComponent<Health>().DealDamage(damageAmount);
+            FindObjectOfType<AudioManager>().Play("Enemy Hurt");
             DestroyProjectile();
         }
     }

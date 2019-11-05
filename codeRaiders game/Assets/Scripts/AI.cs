@@ -30,6 +30,11 @@ public class AI : MonoBehaviour
     float curTimeDrop = 0;
     float nextTime = 15;
 
+    //material for flash
+    private Material matWhite;
+    private Material matDefault;
+    SpriteRenderer sr;
+
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -38,6 +43,10 @@ public class AI : MonoBehaviour
         CheckSpawn = false;
         found = false;
 
+        //flash stun
+        //sr = GetComponent<SpriteRenderer>();
+        //matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
+        //matDefault = sr.material;
         
     }
 
@@ -81,6 +90,9 @@ public class AI : MonoBehaviour
             if (curTime <= 0)
             {
                 player.GetComponent<Health>().DealDamage(6);
+                
+                //sound effect when hitting main character
+                FindObjectOfType<AudioManager>().Play("Enemy Hurt");
 
                 //hitstun code possibly here
 
@@ -138,14 +150,15 @@ public class AI : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             found = true;//bool to see if enemy is touching player
-      
-           
+
            //trigger camera shake
            /*currently only works when prefab is on scene but not when
            they are spawning*/
            //StartCoroutine(cameraShake.Shake(.10f, .4f));
-           
         }
+
+        
+        
         
         
     }
@@ -173,8 +186,11 @@ public void Spawn()
     {
         if (health > 0)
         {
+            //deal damage to enemy
             //Debug.Log("Ouch!");
+
             health = health - number;
+            
         }
         else
         {

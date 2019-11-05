@@ -25,6 +25,7 @@ public class Lava_damage : MonoBehaviour
         {
             if (curTime <= 0) {
                 player.GetComponent<Health>().DealDamage(damage_amount);
+                FindObjectOfType<AudioManager>().Play("Lava Hurt");
  
                 curTime = nextDamage;
             }  

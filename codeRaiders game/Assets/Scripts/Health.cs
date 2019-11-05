@@ -66,7 +66,7 @@ public class Health : MonoBehaviour
             
             //player is dead
             gameObject.SetActive(false);
-            //GAME OVER
+            //GAME OVER SCREEN
             menuContainer.SetActive(true);
             
         }

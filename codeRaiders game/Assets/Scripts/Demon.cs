@@ -54,7 +54,7 @@ public class Demon : MonoBehaviour
         if (other.gameObject.CompareTag("bullet"))
         {
             
-           MaxHealth= MaxHealth-damage;
+           MaxHealth = MaxHealth-damage;
         }
         
         /*else{
