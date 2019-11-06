@@ -568,12 +568,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Enemy Hurt
     clip: {fileID: 8300000, guid: 8a9f13ec75f04434f9ac01ac03a33b23, type: 3}
-    volume: 0.5
+    volume: 0.6
     pitch: 1
     source: {fileID: 0}
   - name: Lava Hurt
     clip: {fileID: 8300000, guid: 2ed67c2c8e4b2124599eac774edd2f9b, type: 3}
-    volume: 0.25
+    volume: 0.35
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &224135250
