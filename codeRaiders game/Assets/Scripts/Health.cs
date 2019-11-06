@@ -7,9 +7,13 @@ public class Health : MonoBehaviour
 {
 
     public Slider HealthBar;
+    public float MaxHealth;
+    public float CurrentHealth;
 
-    public float MaxHealth { get; set; }
-    public float CurrentHealth { get; set; }
+    public Slider ArmorBar;
+    public float MaxArmor;
+    public float CurrentArmor;
+   
 
     public CameraShake cameraShake;
 
@@ -19,12 +23,14 @@ public class Health : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        MaxHealth = 100f;
+        
+       
 
         CurrentHealth = MaxHealth;
+        CurrentArmor = MaxArmor;
 
         HealthBar.value = CalculatedHealth();
-
+        ArmorBar.value = CalculatedArmor();
 
     }
 
@@ -43,7 +49,7 @@ public class Health : MonoBehaviour
 
     public void SetHealth(float health)
     {
-        if (CurrentHealth < 100)
+        if (CurrentHealth < MaxHealth)
         {
             CurrentHealth = CurrentHealth + health;
 
@@ -51,14 +57,26 @@ public class Health : MonoBehaviour
         }
       
     }
+    public void SetArmor(float armor)
+    {
+        if(CurrentArmor<MaxArmor)
+        {
+            CurrentArmor = CurrentArmor + armor;
+            ArmorBar.value = CalculatedArmor();
+        }
+    }
     public void DealDamage(float damage)
     {
-        if (CurrentHealth > 0)
+        if(CurrentArmor>0)
+        {
+            CurrentArmor = CurrentArmor - damage;
+            StartCoroutine(cameraShake.Shake(.10f, .4f));
+            ArmorBar.value = CalculatedArmor();
+        }
+        else if (CurrentHealth > 0)
         {
             CurrentHealth = CurrentHealth - damage;
             StartCoroutine(cameraShake.Shake(.10f, .4f));
-
-
             HealthBar.value = CalculatedHealth();
         }
         else
@@ -79,6 +97,10 @@ public class Health : MonoBehaviour
     public float CalculatedHealth()
     {
         return CurrentHealth / MaxHealth;
+    }
+    public float CalculatedArmor()
+    {
+        return CurrentArmor / MaxArmor;
     }
 
     
