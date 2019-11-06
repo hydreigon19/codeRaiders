@@ -12,6 +12,8 @@ TagManager:
   - wall
   - Boss
   - pitchfork
+  - healthBar
+  - armorPotion
   layers:
   - Default
   - TransparentFX
