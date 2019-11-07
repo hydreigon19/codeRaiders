@@ -1953,10 +1953,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af999f403b89b104d8160a3270e2b6a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 3
+  scene: 2
   loaded: 0
   kills: 0
-  killAmount: 6
+  killAmount: 10
+  bossNum: 0
+  bossKills: 0
 --- !u!4 &657314818
 Transform:
   m_ObjectHideFlags: 0
@@ -1978,7 +1980,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657314816}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 789f90c7a1c458949b01cdf3957f7eea, type: 3}
   m_Name: 

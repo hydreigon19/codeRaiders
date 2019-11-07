@@ -15,19 +15,22 @@ public class Load : MonoBehaviour
     void Start()
     {
         kills = 0;
+        loaded=false;
+        bossKills=0;
     }
     void Update()
     {
-        
-        if(kills>=killAmount+bossNum)
+        if(!loaded)
         {
-            if(!loaded)
-            {
+        if(kills>=killAmount)
+        {
+            
+                AnyManager.anyManager.UnloadScene(scene);
+                SceneManager.LoadSceneAsync(scene + 1, LoadSceneMode.Additive);
                 
-                SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
-                kills = 0;
                 loaded = true;
-            }
+            
+        }
         }
     }
 
