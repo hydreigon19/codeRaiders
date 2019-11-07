@@ -10,13 +10,16 @@ public class Load : MonoBehaviour
     public bool loaded;
     public int kills;
     public int killAmount;
+    public int bossNum;
+    public int bossKills;
     void Start()
     {
         kills = 0;
     }
     void Update()
     {
-        if(kills>=killAmount)
+        
+        if(kills>=killAmount+bossNum)
         {
             if(!loaded)
             {

@@ -43,6 +43,8 @@ public class Boss : MonoBehaviour
         CheckSpawn = false;
         timeBtwShots = startTimeBtwShots;
         found = false;
+        
+
 
         
     }
@@ -185,6 +187,7 @@ public void Spawn()
         else
         {
             load1.kills += 1;
+            load1.bossKills += 1;
             //when enemy has 0 health
             //triggers particle effects
            /* Instantiate(effect, transform.position, Quaternion.identity);
