@@ -12,7 +12,7 @@ public class spawner : MonoBehaviour
     private int rand;
     private int randPosition;
 
-
+    private int numBoss;
     public float startTimeBtwSpawns;
     public float timeBtwSpawns;
     private void Start()
@@ -20,6 +20,7 @@ public class spawner : MonoBehaviour
         timeBtwSpawns = startTimeBtwSpawns;
         NumSpawned = 0;
         NumEnemies = GameObject.FindGameObjectWithTag("loader").GetComponent<Load>().killAmount;
+        numBoss = GameObject.FindGameObjectWithTag("loader").GetComponent<Load>().bossNum;
     }
     private void Update()
     {

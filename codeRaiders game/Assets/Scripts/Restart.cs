@@ -7,6 +7,7 @@ public class Restart : MonoBehaviour
 {
     public void click()
     {
-        SceneManager.LoadScene("level1");
+        
+        SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
     }
 }

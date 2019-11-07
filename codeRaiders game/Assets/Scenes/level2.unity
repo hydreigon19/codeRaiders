@@ -6222,6 +6222,8 @@ MonoBehaviour:
   loaded: 0
   kills: 0
   killAmount: 6
+  bossNum: 1
+  bossKills: 0
 --- !u!4 &1723479706
 Transform:
   m_ObjectHideFlags: 0

@@ -89,9 +89,6 @@ public class Health : MonoBehaviour
             
         }
 
-        
-
-
     }
 
     public float CalculatedHealth()
