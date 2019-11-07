@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
         {
             if (itemCount[0] > 0)
             {
+                FindObjectOfType<AudioManager>().Play("UsePotion");
                 this.GetComponent<Health>().SetHealth(6);//set user health 
                 itemCount[0] -= 1;
             }
@@ -24,6 +25,7 @@ public class Inventory : MonoBehaviour
         {
             if (itemCount[1] > 0)
             {
+                FindObjectOfType<AudioManager>().Play("UsePotion");
                 this.GetComponent<Health>().SetArmor(6);//set user armor 
                 itemCount[1] -= 1;
             }
@@ -50,11 +52,14 @@ public class Inventory : MonoBehaviour
                 itemCount[0] += 1;
                 hasItem[0] = true;
                 Debug.Log(item.name + "was added");
+                FindObjectOfType<AudioManager>().Play("PickUp");
                 Destroy(item);
             }
             else
             {
                 itemCount[0] += 1;
+                
+                FindObjectOfType<AudioManager>().Play("PickUp");
                 Destroy(item);
             }
    
@@ -68,11 +73,13 @@ public class Inventory : MonoBehaviour
                 itemCount[1] += 1;
                 hasItem[1] = true;
                 Debug.Log(item.name + "was added");
+                FindObjectOfType<AudioManager>().Play("PickUp");
                 Destroy(item);
             }
             else
             {
                 itemCount[1] += 1;
+                FindObjectOfType<AudioManager>().Play("PickUp");
                 Destroy(item);
             }
 
