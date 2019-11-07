@@ -2557,69 +2557,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &783163637
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 783163640}
-  - component: {fileID: 783163639}
-  - component: {fileID: 783163638}
-  m_Layer: 0
-  m_Name: Load
-  m_TagString: loader
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &783163638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783163637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 789f90c7a1c458949b01cdf3957f7eea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: 3
-  unloaded: 0
-  newLoaded: 0
---- !u!114 &783163639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783163637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af999f403b89b104d8160a3270e2b6a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: 4
-  loaded: 0
-  kills: 0
-  killAmount: 6
---- !u!4 &783163640
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783163637}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 966.2314, y: 741.4689, z: -1481.8663}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1024447482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,8 +2721,6 @@ MonoBehaviour:
   - {fileID: 637875210}
   - {fileID: 2002263017}
   - {fileID: 760597097}
-  NumEnemies: 12
-  NumSpawned: 0
   startTimeBtwSpawns: 3.5
   timeBtwSpawns: 0
 --- !u!4 &1290533019
@@ -6238,6 +6173,69 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1723479703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1723479706}
+  - component: {fileID: 1723479705}
+  - component: {fileID: 1723479704}
+  m_Layer: 0
+  m_Name: Load
+  m_TagString: loader
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1723479704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723479703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789f90c7a1c458949b01cdf3957f7eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 3
+  unloaded: 0
+  newLoaded: 0
+--- !u!114 &1723479705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723479703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af999f403b89b104d8160a3270e2b6a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 4
+  loaded: 0
+  kills: 0
+  killAmount: 6
+--- !u!4 &1723479706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723479703}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 966.2314, y: 741.4689, z: -1481.8663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1807179430
 GameObject:
   m_ObjectHideFlags: 0
