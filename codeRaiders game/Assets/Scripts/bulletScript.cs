@@ -22,6 +22,7 @@ public class bulletScript : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Boss"))
         {
+            FindObjectOfType<AudioManager>().Play("EnemyHit");
             other.gameObject.GetComponent<Boss>().takeDamage(amount_damage);
             Destroy(this.gameObject);
         }
