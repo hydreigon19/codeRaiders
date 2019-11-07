@@ -19,8 +19,7 @@ public class healthCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        Debug.Log(healthCnt[0]);
+  
         countText.text = "X: "+healthCnt[0];
     }
 }

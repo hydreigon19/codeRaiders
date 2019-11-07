@@ -35,6 +35,7 @@ public class AI : MonoBehaviour
     private Material matDefault;
     SpriteRenderer sr;
 
+    public Load load1;
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -42,7 +43,8 @@ public class AI : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         CheckSpawn = false;
         found = false;
-
+        load1 = GameObject.FindGameObjectWithTag("loader").GetComponent<Load>();
+       
         //flash stun
         //sr = GetComponent<SpriteRenderer>();
         //matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
@@ -194,17 +196,17 @@ public void Spawn()
         }
         else
         {
-            Score.scoreAmount += 1;
+            load1.kills += 1;
             //when enemy has 0 health
             //triggers particle effects
-           /* Instantiate(effect, transform.position, Quaternion.identity);
-           
-            //deletes enemy object
-            Destroy(gameObject);*/
+            /* Instantiate(effect, transform.position, Quaternion.identity);
+
+             //deletes enemy object
+             Destroy(gameObject);*/
 
             //item spawn; probably need to implement differently
-            
-            if(CheckSpawn)//needs to be fixed
+
+            if (CheckSpawn)//needs to be fixed
             {
                 Spawn();
                 Instantiate(effect, transform.position, Quaternion.identity);

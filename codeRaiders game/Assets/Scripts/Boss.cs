@@ -33,8 +33,10 @@ public class Boss : MonoBehaviour
     float curTimeDrop = 0;
     float nextTime = 15;
 
+    public Load load1;
     void Start()
     {
+        load1 = GameObject.FindGameObjectWithTag("loader").GetComponent<Load>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = this.GetComponent<Rigidbody2D>();
        // player = GameObject.FindGameObjectWithTag("Player");
@@ -182,7 +184,7 @@ public void Spawn()
         }
         else
         {
-            Score.scoreAmount += 1;
+            load1.kills += 1;
             //when enemy has 0 health
             //triggers particle effects
            /* Instantiate(effect, transform.position, Quaternion.identity);

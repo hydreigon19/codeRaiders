@@ -6,33 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
-    public static int scoreAmount;
+    public int kills;
     private Text scoreText;
 
     void Start()
     {
         scoreText = GetComponent<Text>();
-        scoreAmount = 0;
+        kills = GameObject.FindGameObjectWithTag("loader").GetComponent<Load>().kills;
     }
     void Update()
     {
-        scoreText.text = "Score: " + scoreAmount;
-        if(scoreAmount == 12){
-            Switch();
-        }
-        else if(scoreAmount >= 6)
-        {
-            if(Input.GetKeyDown(KeyCode.E)){
-                Switch2();
-            }
-        }
+        kills = GameObject.FindGameObjectWithTag("loader").GetComponent<Load>().kills;
+        scoreText.text = "Kills: " + kills;
+       
     }
-    public void Switch()
-    {
-        SceneManager.LoadScene("level2");
-    }
-    public void Switch2()
-    {
-        SceneManager.LoadScene("level3");
-    }
+    
 }
