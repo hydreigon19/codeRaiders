@@ -7,11 +7,13 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         SceneManager.LoadScene("NeverUnload");
     }
     public void QuitGame()
     {
         //Dubug.Log("QUIT");
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
         Application.Quit();
     }
     public void click()

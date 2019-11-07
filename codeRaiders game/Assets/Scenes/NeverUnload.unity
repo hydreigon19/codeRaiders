@@ -2030,8 +2030,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 90127a258899b8343b82265dfd6fae0a, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 1106578836}
+        m_MethodName: click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2286,16 +2286,43 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: ccc31fbcdff7b1b448bd2a19d24b730c, type: 3}
     volume: 0.15
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: Enemy Hurt
     clip: {fileID: 8300000, guid: 8a9f13ec75f04434f9ac01ac03a33b23, type: 3}
-    volume: 0.5
+    volume: 0.6
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: Lava Hurt
     clip: {fileID: 8300000, guid: 2ed67c2c8e4b2124599eac774edd2f9b, type: 3}
-    volume: 0.25
+    volume: 0.3
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: IngameTheme
+    clip: {fileID: 8300000, guid: 9620de2ad5d7bb147b41c80970989d1f, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: PickUp
+    clip: {fileID: 8300000, guid: ca1460f49aa5adc44803537ad067dc50, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UsePotion
+    clip: {fileID: 8300000, guid: 72e7dc9da434a194290e3c1e16c3b115, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyHit
+    clip: {fileID: 8300000, guid: 5129eb1d3749bfb45b7c31a38697f3c4, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1217134888
 Transform:
