@@ -20,6 +20,18 @@ public class bulletScript : MonoBehaviour
             other.gameObject.GetComponent<AI>().takeDamage(amount_damage);
             Destroy(this.gameObject);
         }
+        else if (other.gameObject.CompareTag("enemyfirstroom"))
+        {
+            FindObjectOfType<AudioManager>().Play("EnemyHit");
+            other.gameObject.GetComponent<AIFirstLevel>().takeDamage(amount_damage);
+            Destroy(this.gameObject);
+        }
+        else if (other.gameObject.CompareTag("bossfirstroom"))
+        {
+            FindObjectOfType<AudioManager>().Play("EnemyHit");
+            other.gameObject.GetComponent<BossFirstLevel>().takeDamage(amount_damage);
+            Destroy(this.gameObject);
+        }
         else if (other.gameObject.CompareTag("Boss"))
         {
             FindObjectOfType<AudioManager>().Play("EnemyHit");

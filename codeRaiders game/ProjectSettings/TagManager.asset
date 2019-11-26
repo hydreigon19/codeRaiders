@@ -16,6 +16,8 @@ TagManager:
   - armorPotion
   - Score
   - loader
+  - enemyfirstroom
+  - bossfirstroom
   layers:
   - Default
   - TransparentFX
