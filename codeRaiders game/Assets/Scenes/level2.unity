@@ -6222,7 +6222,7 @@ MonoBehaviour:
   loaded: 0
   kills: 0
   killAmount: 10
-  bossNum: 0
+  bossNum: 1
   bossKills: 0
   player: {fileID: 0}
   Timer: {fileID: 0}

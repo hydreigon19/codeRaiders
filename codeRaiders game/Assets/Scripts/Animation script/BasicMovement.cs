@@ -103,7 +103,7 @@ public class BasicMovement : MonoBehaviour
 
         }
        
-         if (shootingRecoil > 0.0f)
+         if (shootingRecoil > 0.0f&&movementSpeed>0) 
         {
             animator.SetFloat("AimingState", 1.0f);
         }
