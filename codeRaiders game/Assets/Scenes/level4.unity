@@ -3619,6 +3619,7 @@ MonoBehaviour:
   killAmount: 10
   bossNum: 0
   bossKills: 0
+  numSpawn: 10
   player: {fileID: 0}
   Timer: {fileID: 0}
   time: 180

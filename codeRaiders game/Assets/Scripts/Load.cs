@@ -13,10 +13,12 @@ public class Load : MonoBehaviour
     public int killAmount;
     public int bossNum;
     public int bossKills;
+    public int numSpawn;
     public GameObject player;
     public GameObject Timer;
     public float time;
     public GameObject levelText;
+    
     
     void Start()
     {

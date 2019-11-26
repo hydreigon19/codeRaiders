@@ -5020,9 +5020,10 @@ MonoBehaviour:
   scene: 3
   loaded: 0
   kills: 0
-  killAmount: 10
-  bossNum: 0
+  killAmount: 13
+  bossNum: 3
   bossKills: 0
+  numSpawn: 10
   player: {fileID: 0}
   Timer: {fileID: 0}
   time: 180

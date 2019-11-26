@@ -19,7 +19,7 @@ public class spawner : MonoBehaviour
     {
         timeBtwSpawns = startTimeBtwSpawns;
         NumSpawned = 0;
-        NumEnemies = GameObject.FindGameObjectWithTag("loader").GetComponent<Load>().killAmount;
+        NumEnemies = GameObject.FindGameObjectWithTag("loader").GetComponent<Load>().numSpawn;
         numBoss = GameObject.FindGameObjectWithTag("loader").GetComponent<Load>().bossNum;
     }
     private void Update()

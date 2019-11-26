@@ -6221,9 +6221,10 @@ MonoBehaviour:
   scene: 4
   loaded: 0
   kills: 0
-  killAmount: 10
+  killAmount: 11
   bossNum: 1
   bossKills: 0
+  numSpawn: 10
   player: {fileID: 0}
   Timer: {fileID: 0}
   time: 180
