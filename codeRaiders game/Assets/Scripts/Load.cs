@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Load : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Load : MonoBehaviour
     public GameObject player;
     public GameObject Timer;
     public float time;
+    public GameObject levelText;
+    
     void Start()
     {
         kills = 0;
@@ -23,7 +26,9 @@ public class Load : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         Timer = GameObject.FindGameObjectWithTag("timer");
         Timer.GetComponent<countdownTimer>().setTime(time);
-
+        
+        
+        
     }
     void Update()
     {
@@ -33,7 +38,7 @@ public class Load : MonoBehaviour
             {
                 player.transform.position = new Vector2(0, 0);
                 AnyManager.anyManager.UnloadScene(scene);
-                SceneManager.LoadSceneAsync(scene + 1, LoadSceneMode.Additive);
+                
                 
                 loaded = true;
             
@@ -41,5 +46,6 @@ public class Load : MonoBehaviour
         }
         
     }
+    
 
 }

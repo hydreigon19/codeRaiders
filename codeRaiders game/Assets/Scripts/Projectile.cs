@@ -7,7 +7,7 @@ public class Projectile : MonoBehaviour
     public float speed;
     private Transform player;
     private Vector2 target;
-    public int damageAmount;
+    public float damageAmount;
     private int secToDestroy;
     // Start is called before the first frame update
     void Start()

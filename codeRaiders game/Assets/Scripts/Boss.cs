@@ -94,7 +94,7 @@ public class Boss : MonoBehaviour
         {
             if (curTime <= 0)
             {
-                target.GetComponent<Health>().DealDamage(6);
+                target.GetComponent<Health>().DealDamage(15);
                 curTime = nextDamage;
             }
             else

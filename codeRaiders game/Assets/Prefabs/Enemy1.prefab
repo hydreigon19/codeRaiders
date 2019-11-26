@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1814f475e2f26934987da8bc4122bf87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
   stoppingDistance: 0.75
   health: 10
   healthitem: {fileID: 1686114545021123721, guid: 32ca9f0e42036784196988aba9843deb,
@@ -150,8 +150,7 @@ MonoBehaviour:
   animator: {fileID: 6268749718474564880}
   player: {fileID: 0}
   effect: {fileID: 6143397966539000445, guid: 73fbde28793c0b04b8576379e571dfde, type: 3}
-  cameraShake: {fileID: 2755356989873726892, guid: d47cfad6d1d08ac4790f8b2e6adedc71,
-    type: 3}
+  load1: {fileID: 0}
 --- !u!61 &6268749718474564908
 BoxCollider2D:
   m_ObjectHideFlags: 0

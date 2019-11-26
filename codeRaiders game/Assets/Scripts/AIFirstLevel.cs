@@ -97,7 +97,7 @@ public class AIFirstLevel : MonoBehaviour
         {
             if (curTime <= 0)
             {
-                player.GetComponent<Health>().DealDamage(6);
+                player.GetComponent<Health>().DealDamage(5);
 
                 //sound effect when hitting main character
                 FindObjectOfType<AudioManager>().Play("Enemy Hurt");

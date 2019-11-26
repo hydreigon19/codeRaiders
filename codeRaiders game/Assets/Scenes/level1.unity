@@ -1962,6 +1962,7 @@ MonoBehaviour:
   player: {fileID: 0}
   Timer: {fileID: 0}
   time: 180
+  levelText: {fileID: 0}
 --- !u!4 &657314818
 Transform:
   m_ObjectHideFlags: 0

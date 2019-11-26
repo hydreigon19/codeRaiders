@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
     public Button[] InventoryButtons;
     public int[] itemCount;
     public bool[] hasItem;
+    
    
     void Update()
     {
@@ -16,18 +17,26 @@ public class Inventory : MonoBehaviour
         {
             if (itemCount[0] > 0)
             {
-                FindObjectOfType<AudioManager>().Play("UsePotion");
-                this.GetComponent<Health>().SetHealth(5);//set user health 
-                itemCount[0] -= 1;
+                if(this.GetComponent<Health>().CurrentHealth<this.GetComponent<Health>().MaxHealth)
+                {
+                    FindObjectOfType<AudioManager>().Play("UsePotion");
+                    this.GetComponent<Health>().SetHealth(5);//set user health 
+                    itemCount[0] -= 1;
+                }
+                
             }
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             if (itemCount[1] > 0)
             {
-                FindObjectOfType<AudioManager>().Play("UsePotion");
-                this.GetComponent<Health>().SetArmor(10);//set user armor 
-                itemCount[1] -= 1;
+                if(this.GetComponent<Health>().CurrentArmor < this.GetComponent<Health>().MaxArmor)
+                {
+                    FindObjectOfType<AudioManager>().Play("UsePotion");
+                    this.GetComponent<Health>().SetArmor(10);//set user armor 
+                    itemCount[1] -= 1;
+                }
+                
             }
         }
         if (itemCount[0] == 0)

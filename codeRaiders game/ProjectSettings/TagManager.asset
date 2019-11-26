@@ -19,6 +19,7 @@ TagManager:
   - enemyfirstroom
   - bossfirstroom
   - timer
+  - levelDisplay
   layers:
   - Default
   - TransparentFX
