@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
             if (itemCount[0] > 0)
             {
                 FindObjectOfType<AudioManager>().Play("UsePotion");
-                this.GetComponent<Health>().SetHealth(6);//set user health 
+                this.GetComponent<Health>().SetHealth(5);//set user health 
                 itemCount[0] -= 1;
             }
         }
@@ -26,7 +26,7 @@ public class Inventory : MonoBehaviour
             if (itemCount[1] > 0)
             {
                 FindObjectOfType<AudioManager>().Play("UsePotion");
-                this.GetComponent<Health>().SetArmor(6);//set user armor 
+                this.GetComponent<Health>().SetArmor(10);//set user armor 
                 itemCount[1] -= 1;
             }
         }
