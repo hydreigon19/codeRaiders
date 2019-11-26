@@ -18,6 +18,7 @@ TagManager:
   - loader
   - enemyfirstroom
   - bossfirstroom
+  - timer
   layers:
   - Default
   - TransparentFX

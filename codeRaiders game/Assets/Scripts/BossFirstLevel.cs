@@ -94,33 +94,33 @@ public class BossFirstLevel : MonoBehaviour
             {
                 transform.position = Vector2.MoveTowards(transform.position, target.position, -speed * Time.deltaTime);
             }
-        }
-        if (found == true)//Credits to JT..I used the same exact structure as his code from the lava_damage script// this is a timer for when the enemy is touching player the health goes down
-        {
-            if (curTime <= 0)
+
+            if (found == true)//Credits to JT..I used the same exact structure as his code from the lava_damage script// this is a timer for when the enemy is touching player the health goes down
             {
-                target.GetComponent<Health>().DealDamage(6);
-                curTime = nextDamage;
+                if (curTime <= 0)
+                {
+                    target.GetComponent<Health>().DealDamage(6);
+                    curTime = nextDamage;
+                }
+                else
+                {
+
+                    curTime -= Time.deltaTime;
+                }
+
+
+            }
+            if (timeBtwShots <= 0)
+            {
+                Instantiate(projectile, transform.position, Quaternion.identity);
+                timeBtwShots = startTimeBtwShots;
             }
             else
             {
-
-                curTime -= Time.deltaTime;
+                timeBtwShots -= Time.deltaTime;
             }
 
-
         }
-        if (timeBtwShots <= 0)
-        {
-            Instantiate(projectile, transform.position, Quaternion.identity);
-            timeBtwShots = startTimeBtwShots;
-        }
-        else
-        {
-            timeBtwShots -= Time.deltaTime;
-        }
-
-
 
 
         if (TimeDelay <= 0)

@@ -4818,6 +4818,9 @@ MonoBehaviour:
   killAmount: 10
   bossNum: 0
   bossKills: 0
+  player: {fileID: 0}
+  Timer: {fileID: 0}
+  time: 180
 --- !u!4 &1057683429
 Transform:
   m_ObjectHideFlags: 0

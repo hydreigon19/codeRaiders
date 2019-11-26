@@ -22,7 +22,11 @@ public class FirstRoomBoss : MonoBehaviour
         {
             for (int i = 0; i < enemies.Length; i++)
             {
-                enemies[i].gameObject.GetComponent<BossFirstLevel>().SetFollow();
+                if(enemies[i]!=null)
+                {
+                    enemies[i].gameObject.GetComponent<BossFirstLevel>().SetFollow();
+                }
+               
             }
         }
     }

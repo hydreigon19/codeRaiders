@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class countdownTimer : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 180f;
+    public float startingTime = 180f;
 
     [SerializeField] Text countdownText;
+    public GameObject menuContainer;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +28,15 @@ public class countdownTimer : MonoBehaviour
         if(currentTime <= 0 ){
             currentTime = 0;
         }
+        if(currentTime==0)
+        {
+            player.SetActive(false);
+            menuContainer.SetActive(true);
+        }
+    }
+    public void setTime(float time)
+    {
+        startingTime = time;
+        currentTime = startingTime;
     }
 }

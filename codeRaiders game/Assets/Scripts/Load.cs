@@ -13,27 +13,33 @@ public class Load : MonoBehaviour
     public int bossNum;
     public int bossKills;
     public GameObject player;
+    public GameObject Timer;
+    public float time;
     void Start()
     {
         kills = 0;
         loaded=false;
         bossKills=0;
         player = GameObject.FindGameObjectWithTag("Player");
+        Timer = GameObject.FindGameObjectWithTag("timer");
+        Timer.GetComponent<countdownTimer>().setTime(time);
+
     }
     void Update()
     {
         if(!loaded)
         {
-        if(kills>=killAmount)
-        {
+            if(kills>=killAmount)
+            {
                 player.transform.position = new Vector2(0, 0);
                 AnyManager.anyManager.UnloadScene(scene);
                 SceneManager.LoadSceneAsync(scene + 1, LoadSceneMode.Additive);
                 
                 loaded = true;
             
+            }
         }
-        }
+        
     }
 
 }

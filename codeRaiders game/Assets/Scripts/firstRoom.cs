@@ -20,9 +20,12 @@ public class firstRoom : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            for(int i=0;i<enemies.Length;i++)
+            for (int i = 0; i < enemies.Length; i++)
             {
-                enemies[i].gameObject.GetComponent<AIFirstLevel>().SetFollow();
+                if (enemies[i] != null)
+                {
+                    enemies[i].gameObject.GetComponent<AIFirstLevel>().SetFollow();
+                }
             }
         }
     }
