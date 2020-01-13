@@ -1,2 +1,2 @@
 # codeRaiders
-a video game
+A video game for Intro to Game Developement class.
